@@ -643,6 +643,31 @@
         padding: 1rem 0;
         transition: var(--transition);
     }
+   
+/* Hover effects for the View All button */
+a[href="projects.html"]:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+a[href="projects.html"]:hover i.fa-arrow-right {
+    transform: translateX(5px);
+}
+
+/* Active state */
+a[href="projects.html"]:active {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 15px 25px -12px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    a[href="projects.html"] {
+        padding: 0.875rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -846,7 +871,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x220/ec4899/FFFFFF?text=MLSA+Chatbot+Amy" alt="MLSA Support Chatbot Amy Screenshot">
+                    <img src="images/mlsa.png" alt="MLSA Support Chatbot Amy Screenshot">
                     <div class="project-card-body">
                         <h3 class="project-title">MLSA Support Chatbot "Amy"</h3>
                         <p class="project-description">An AI-powered chatbot that was a finalist for the MLSA September 2023 cohort's AI project. Amy implements generative responses for MLSA queries and knowledge access, with automated escalation and resource navigation. Used Azure OpenAI to solve problems faced by Microsoft in volunteer communities before it was released to the public, leading to a Letter of Recommendation and participation in hackathons.</p>
@@ -867,7 +892,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x220/6366f1/FFFFFF?text=AI+Tutor+ChatApp" alt="Multilingual AI Tutor ChatApp Screenshot">
+                    <img src="images/ai.png" alt="Multilingual AI Tutor ChatApp Screenshot">
                     <div class="project-card-body">
                         <h3 class="project-title">Multilingual AI Tutor ChatApp</h3>
                         <p class="project-description">Developed a multilingual AI chat application for exam preparation in India, recognized as a promising entry at the Microsoft AI Chat App Hack. Implemented comprehensive subject coverage for Physics, Chemistry, Maths, and Biology, creating a virtual science tutor with search functionalities.</p>
@@ -887,7 +912,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x220/06d6a0/FFFFFF?text=Business+Website+Mockup" alt="Business Website Mockup Screenshot">
+                    <img src="images/techsol.png" alt="Business Website Mockup Screenshot">
                     <div class="project-card-body">
                         <h3 class="project-title">Business Website Mockup (TechSol)</h3>
                         <p class="project-description">A responsive and modern business website mockup, demonstrating strong front-end web development skills for showcasing services and solutions.</p>
@@ -908,7 +933,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x220/f59e0b/FFFFFF?text=Chess+Workshop+Landing" alt="Chess Workshop Landing Page Screenshot">
+                    <img src="images/maxchess.png" alt="Chess Workshop Landing Page Screenshot">
                     <div class="project-card-body">
                         <h3 class="project-title">Chess Workshop Landing Page</h3>
                         <p class="project-description">A captivating landing page designed for a workshop, optimized for lead generation, showcasing web development proficiency in creating engaging user experiences.</p>
@@ -929,7 +954,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x220/10b981/FFFFFF?text=Web+GIS+using+NLP" alt="Web GIS using NLP Screenshot">
+                    <img src="images\nlpgis.png" alt="Web GIS using NLP Screenshot">
                     <div class="project-card-body">
                         <h3 class="project-title">Web GIS using NLP</h3>
                         <p class="project-description">A project exploring the integration of Web GIS (Geographic Information Systems) with Natural Language Processing, enabling new ways to interact with spatial data through text commands.</p>
@@ -948,6 +973,30 @@
             </div>
         </div>
     </div>
+    <!-- View All Projects Button -->
+<div style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
+    <a href="projects.html" 
+       style="display: inline-flex; 
+              align-items: center; 
+              gap: 0.75rem; 
+              background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%); 
+              color: white; 
+              padding: 1rem 2rem; 
+              border-radius: 3rem; 
+              font-weight: 600; 
+              font-size: 1.1rem; 
+              text-decoration: none; 
+              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+              box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); 
+              border: none; 
+              font-family: 'Space Grotesk', sans-serif;">
+        <i class="fas fa-folder-open" style="font-size: 1.2rem;"></i>
+        View All Projects
+        <i class="fas fa-arrow-right" style="font-size: 1rem; transition: transform 0.3s ease;"></i>
+    </a>
+</div>
+
+
 </section>
     <!-- Process Section -->
     <section id="process" class="process-section">
@@ -1054,8 +1103,8 @@
             </div>
             <p class="mb-4">"Building the future, one line of code at a time."</p>
             <div class="social-links mb-4">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ricky-rodrigues-97b305201/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/rickyrodrigues" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
             <p class="text-muted small">&copy; 2023 Ricky D. Rodrigues. All rights reserved.</p>
